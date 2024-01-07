@@ -1,0 +1,39 @@
+.label {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.span {
+    color: #353535;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.checkbox {
+    appearance: none;
+    position: relative;
+}
+
+.checkbox::after {
+    content: '';
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.checkbox:checked::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    width: calc(1.25rem - 6px);
+    height: calc(1.25rem - 6px);
+    background-color: green;
+}
